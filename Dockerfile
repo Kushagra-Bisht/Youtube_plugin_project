@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -9,6 +9,8 @@ COPY flask_app/ /app/
 COPY tfidf_vectorizer.pkl /app/tfidf_vectorizer.pkl
 
 RUN pip install -r requirements.txt
+
+RUN pip install --upgrade pip setuptools
 
 RUN python -m nltk.downloader stopwords wordnet
 
