@@ -22,3 +22,4 @@ if response.status_code == 200:
 else:
     print(f"Request failed with status code: {response.status_code}")
     print("Error message:", response.text)
+    print("..")
